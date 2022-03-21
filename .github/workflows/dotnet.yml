@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.201'
+          dotnet-version: '6.0.101'
       - run: dotnet test
       - run: dotnet publish ./src/Ahlem.Fahem.Ocr.Console/Ahlem.Fahem.Ocr.Console.csproj --self-contained true --output ./win-x64/ocr -c Release -r win-x64 /p:PublishSingleFile=true /p:PublishTrimmed=true /p:PublishReadyToRun=true
       - name: Upload Console Build Artifact
